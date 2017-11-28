@@ -18,13 +18,13 @@ def valid_int(value):
 
 
 def get_int(prompt):
-    value = ""
+    value = 0
 
     value = input(prompt)
     while not valid_int(value):
-        print(value, "is not a number.")
+        print("enter a number between 1 and 15")
         value = input(prompt)
-    return int(prompt)
+    return int(value)
 
 
 def get_score():
@@ -32,11 +32,9 @@ def get_score():
     score = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     index = 0
     while index < len(score):
-        score[index] = get_int(input('Enter the score for hole ' + str(index + 1) + ': '))
+        score[index] = get_int('Enter the score for hole ' + str(index + 1) + ': ')
         index += 1
     return score
-    #for n in score:
-     #   print(n)
 
 
 def get_analysis(score):
